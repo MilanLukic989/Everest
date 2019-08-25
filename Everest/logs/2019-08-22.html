@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<!--
+  ~ Copyright 2018 Rohit Awate.
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~      http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>22/08/2019</title>
+    <style>
+        body {
+            margin: 0px;
+            background-color: #282828;
+            font-size: 15px;
+            font-family: "Liberation Mono", monospace;
+        }
+
+        h1 {
+            font-family: sans-serif;
+            padding: 20px;
+            margin: 0;
+            text-align: center;
+            color: white;
+            background-color: #747474;
+        }
+
+        p {
+            margin: 20px;
+        }
+
+        .SEVERE {
+            color: orangered;
+        }
+
+        .WARNING {
+            color: yellow;
+        }
+
+        .INFO {
+            color: cornflowerblue;
+        }
+    </style>
+</head>
+<body>
+<h1>Everest Logs: 22/08/2019</h1>
+<p class="INFO">
+    <strong>INFO</strong> 22/08/2019 20:40:38 <br>
+    <strong>Settings file not found. Loading defaults.</strong> <br>
+    
+</p>
+<p class="INFO">
+    <strong>INFO</strong> 22/08/2019 20:40:39 <br>
+    <strong>Connected to database.</strong> <br>
+    
+</p>
+<p class="INFO">
+    <strong>INFO</strong> 22/08/2019 20:40:42 <br>
+    <strong>Application loaded.</strong> <br>
+    
+</p>
+<p class="INFO">
+    <strong>INFO</strong> 22/08/2019 20:49:23 <br>
+    <strong>Settings file not found. Loading defaults.</strong> <br>
+    
+</p>
+<p class="INFO">
+    <strong>INFO</strong> 22/08/2019 20:49:24 <br>
+    <strong>Connected to database.</strong> <br>
+    
+</p>
+<p class="INFO">
+    <strong>INFO</strong> 22/08/2019 20:49:26 <br>
+    <strong>Application loaded.</strong> <br>
+    
+</p>
+<p class="SEVERE">
+    <strong>SEVERE</strong> 22/08/2019 20:50:31 <br>
+    <strong>Database error.</strong> <br>
+    org.sqlite.SQLiteException: [SQLITE_BUSY]  The database file is locked (database is locked)<br>
+ -- org.sqlite.core.DB.newSQLException(DB.java:909)<br>
+ -- org.sqlite.core.DB.newSQLException(DB.java:921)<br>
+ -- org.sqlite.core.DB.execute(DB.java:822)<br>
+ -- org.sqlite.jdbc3.JDBC3PreparedStatement.execute(JDBC3PreparedStatement.java:53)<br>
+ -- com.rohitawate.everest.sync.SQLiteManager.clearHistory(SQLiteManager.java:385)<br>
+ -- com.rohitawate.everest.sync.SyncManager.clearHistory(SyncManager.java:77)<br>
+ -- com.rohitawate.everest.controllers.HistoryPaneController.clearRequest(HistoryPaneController.java:74)<br>
+ -- java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br>
+ -- java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br>
+ -- java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br>
+ -- java.base/java.lang.reflect.Method.invoke(Method.java:566)<br>
+ -- com.sun.javafx.reflect.Trampoline.invoke(MethodUtil.java:76)<br>
+ -- java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br>
+ -- java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br>
+ -- java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br>
+ -- java.base/java.lang.reflect.Method.invoke(Method.java:566)<br>
+ -- com.sun.javafx.reflect.MethodUtil.invoke(MethodUtil.java:273)<br>
+ -- com.sun.javafx.fxml.MethodHelper.invoke(MethodHelper.java:83)<br>
+ -- javafx.fxml.FXMLLoader$MethodHandler.invoke(FXMLLoader.java:1784)<br>
+ -- javafx.fxml.FXMLLoader$ControllerMethodEventHandler.handle(FXMLLoader.java:1670)<br>
+ -- com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:86)<br>
+ -- com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:238)<br>
+ -- com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:191)<br>
+ -- com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)<br>
+ -- com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)<br>
+ -- com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)<br>
+ -- com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)<br>
+ -- com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)<br>
+ -- com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)<br>
+ -- com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)<br>
+ -- com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)<br>
+ -- com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)<br>
+ -- com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)<br>
+ -- com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:49)<br>
+ -- javafx.event.Event.fireEvent(Event.java:198)<br>
+ -- javafx.scene.Node.fireEvent(Node.java:8890)<br>
+ -- javafx.scene.control.Button.fire(Button.java:203)<br>
+ -- com.sun.javafx.scene.control.behavior.ButtonBehavior.mouseReleased(ButtonBehavior.java:206)<br>
+ -- com.sun.javafx.scene.control.inputmap.InputMap.handle(InputMap.java:274)<br>
+ -- com.sun.javafx.event.CompositeEventHandler$NormalEventHandlerRecord.handleBubblingEvent(CompositeEventHandler.java:218)<br>
+ -- com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:80)<br>
+ -- com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:238)<br>
+ -- com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:191)<br>
+ -- com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)<br>
+ -- com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)<br>
+ -- com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)<br>
+ -- com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)<br>
+ -- com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)<br>
+ -- com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)<br>
+ -- com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)<br>
+ -- com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)<br>
+ -- com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)<br>
+ -- com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)<br>
+ -- com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:54)<br>
+ -- javafx.event.Event.fireEvent(Event.java:198)<br>
+ -- javafx.scene.Scene$MouseHandler.process(Scene.java:3862)<br>
+ -- javafx.scene.Scene.processMouseEvent(Scene.java:1849)<br>
+ -- javafx.scene.Scene$ScenePeerListener.mouseEvent(Scene.java:2590)<br>
+ -- com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:409)<br>
+ -- com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:299)<br>
+ -- java.base/java.security.AccessController.doPrivileged(Native Method)<br>
+ -- com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleMouseEvent$2(GlassViewEventHandler.java:447)<br>
+ -- com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(QuantumToolkit.java:411)<br>
+ -- com.sun.javafx.tk.quantum.GlassViewEventHandler.handleMouseEvent(GlassViewEventHandler.java:446)<br>
+ -- com.sun.glass.ui.View.handleMouseEvent(View.java:556)<br>
+ -- com.sun.glass.ui.View.notifyMouse(View.java:942)<br>
+ -- com.sun.glass.ui.win.WinApplication._runLoop(Native Method)<br>
+ -- com.sun.glass.ui.win.WinApplication.lambda$runLoop$3(WinApplication.java:174)<br>
+ -- java.base/java.lang.Thread.run(Thread.java:834)<br>
+
+</p>
+<p class="SEVERE">
+    <strong>SEVERE</strong> 22/08/2019 20:50:36 <br>
+    <strong>Database error.</strong> <br>
+    org.sqlite.SQLiteException: [SQLITE_BUSY]  The database file is locked (database is locked)<br>
+ -- org.sqlite.core.DB.newSQLException(DB.java:909)<br>
+ -- org.sqlite.core.DB.newSQLException(DB.java:921)<br>
+ -- org.sqlite.core.DB.execute(DB.java:822)<br>
+ -- org.sqlite.jdbc3.JDBC3PreparedStatement.execute(JDBC3PreparedStatement.java:53)<br>
+ -- com.rohitawate.everest.sync.SQLiteManager.clearHistory(SQLiteManager.java:385)<br>
+ -- com.rohitawate.everest.sync.SyncManager.clearHistory(SyncManager.java:77)<br>
+ -- com.rohitawate.everest.controllers.HistoryPaneController.clearRequest(HistoryPaneController.java:74)<br>
+ -- java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br>
+ -- java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br>
+ -- java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br>
+ -- java.base/java.lang.reflect.Method.invoke(Method.java:566)<br>
+ -- com.sun.javafx.reflect.Trampoline.invoke(MethodUtil.java:76)<br>
+ -- java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br>
+ -- java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br>
+ -- java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br>
+ -- java.base/java.lang.reflect.Method.invoke(Method.java:566)<br>
+ -- com.sun.javafx.reflect.MethodUtil.invoke(MethodUtil.java:273)<br>
+ -- com.sun.javafx.fxml.MethodHelper.invoke(MethodHelper.java:83)<br>
+ -- javafx.fxml.FXMLLoader$MethodHandler.invoke(FXMLLoader.java:1784)<br>
+ -- javafx.fxml.FXMLLoader$ControllerMethodEventHandler.handle(FXMLLoader.java:1670)<br>
+ -- com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:86)<br>
+ -- com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:238)<br>
+ -- com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:191)<br>
+ -- com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)<br>
+ -- com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)<br>
+ -- com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)<br>
+ -- com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)<br>
+ -- com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)<br>
+ -- com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)<br>
+ -- com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)<br>
+ -- com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)<br>
+ -- com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)<br>
+ -- com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)<br>
+ -- com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:49)<br>
+ -- javafx.event.Event.fireEvent(Event.java:198)<br>
+ -- javafx.scene.Node.fireEvent(Node.java:8890)<br>
+ -- javafx.scene.control.Button.fire(Button.java:203)<br>
+ -- com.sun.javafx.scene.control.behavior.ButtonBehavior.mouseReleased(ButtonBehavior.java:206)<br>
+ -- com.sun.javafx.scene.control.inputmap.InputMap.handle(InputMap.java:274)<br>
+ -- com.sun.javafx.event.CompositeEventHandler$NormalEventHandlerRecord.handleBubblingEvent(CompositeEventHandler.java:218)<br>
+ -- com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:80)<br>
+ -- com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:238)<br>
+ -- com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:191)<br>
+ -- com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)<br>
+ -- com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)<br>
+ -- com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)<br>
+ -- com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)<br>
+ -- com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)<br>
+ -- com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)<br>
+ -- com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)<br>
+ -- com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)<br>
+ -- com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)<br>
+ -- com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)<br>
+ -- com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:54)<br>
+ -- javafx.event.Event.fireEvent(Event.java:198)<br>
+ -- javafx.scene.Scene$MouseHandler.process(Scene.java:3862)<br>
+ -- javafx.scene.Scene.processMouseEvent(Scene.java:1849)<br>
+ -- javafx.scene.Scene$ScenePeerListener.mouseEvent(Scene.java:2590)<br>
+ -- com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:409)<br>
+ -- com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:299)<br>
+ -- java.base/java.security.AccessController.doPrivileged(Native Method)<br>
+ -- com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleMouseEvent$2(GlassViewEventHandler.java:447)<br>
+ -- com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(QuantumToolkit.java:411)<br>
+ -- com.sun.javafx.tk.quantum.GlassViewEventHandler.handleMouseEvent(GlassViewEventHandler.java:446)<br>
+ -- com.sun.glass.ui.View.handleMouseEvent(View.java:556)<br>
+ -- com.sun.glass.ui.View.notifyMouse(View.java:942)<br>
+ -- com.sun.glass.ui.win.WinApplication._runLoop(Native Method)<br>
+ -- com.sun.glass.ui.win.WinApplication.lambda$runLoop$3(WinApplication.java:174)<br>
+ -- java.base/java.lang.Thread.run(Thread.java:834)<br>
+
+</p>
+<p class="SEVERE">
+    <strong>SEVERE</strong> 22/08/2019 20:50:40 <br>
+    <strong>Database error.</strong> <br>
+    org.sqlite.SQLiteException: [SQLITE_BUSY]  The database file is locked (database is locked)<br>
+ -- org.sqlite.core.DB.newSQLException(DB.java:909)<br>
+ -- org.sqlite.core.DB.newSQLException(DB.java:921)<br>
+ -- org.sqlite.core.DB.execute(DB.java:822)<br>
+ -- org.sqlite.jdbc3.JDBC3PreparedStatement.execute(JDBC3PreparedStatement.java:53)<br>
+ -- com.rohitawate.everest.sync.SQLiteManager.clearHistory(SQLiteManager.java:385)<br>
+ -- com.rohitawate.everest.sync.SyncManager.clearHistory(SyncManager.java:77)<br>
+ -- com.rohitawate.everest.controllers.HistoryPaneController.clearRequest(HistoryPaneController.java:74)<br>
+ -- java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br>
+ -- java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br>
+ -- java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br>
+ -- java.base/java.lang.reflect.Method.invoke(Method.java:566)<br>
+ -- com.sun.javafx.reflect.Trampoline.invoke(MethodUtil.java:76)<br>
+ -- java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br>
+ -- java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br>
+ -- java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br>
+ -- java.base/java.lang.reflect.Method.invoke(Method.java:566)<br>
+ -- com.sun.javafx.reflect.MethodUtil.invoke(MethodUtil.java:273)<br>
+ -- com.sun.javafx.fxml.MethodHelper.invoke(MethodHelper.java:83)<br>
+ -- javafx.fxml.FXMLLoader$MethodHandler.invoke(FXMLLoader.java:1784)<br>
+ -- javafx.fxml.FXMLLoader$ControllerMethodEventHandler.handle(FXMLLoader.java:1670)<br>
+ -- com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:86)<br>
+ -- com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:238)<br>
+ -- com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:191)<br>
+ -- com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)<br>
+ -- com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)<br>
+ -- com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)<br>
+ -- com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)<br>
+ -- com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)<br>
+ -- com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)<br>
+ -- com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)<br>
+ -- com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)<br>
+ -- com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)<br>
+ -- com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)<br>
+ -- com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:49)<br>
+ -- javafx.event.Event.fireEvent(Event.java:198)<br>
+ -- javafx.scene.Node.fireEvent(Node.java:8890)<br>
+ -- javafx.scene.control.Button.fire(Button.java:203)<br>
+ -- com.sun.javafx.scene.control.behavior.ButtonBehavior.mouseReleased(ButtonBehavior.java:206)<br>
+ -- com.sun.javafx.scene.control.inputmap.InputMap.handle(InputMap.java:274)<br>
+ -- com.sun.javafx.event.CompositeEventHandler$NormalEventHandlerRecord.handleBubblingEvent(CompositeEventHandler.java:218)<br>
+ -- com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:80)<br>
+ -- com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:238)<br>
+ -- com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:191)<br>
+ -- com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)<br>
+ -- com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)<br>
+ -- com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)<br>
+ -- com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)<br>
+ -- com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)<br>
+ -- com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)<br>
+ -- com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)<br>
+ -- com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)<br>
+ -- com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)<br>
+ -- com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)<br>
+ -- com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:54)<br>
+ -- javafx.event.Event.fireEvent(Event.java:198)<br>
+ -- javafx.scene.Scene$MouseHandler.process(Scene.java:3862)<br>
+ -- javafx.scene.Scene.processMouseEvent(Scene.java:1849)<br>
+ -- javafx.scene.Scene$ScenePeerListener.mouseEvent(Scene.java:2590)<br>
+ -- com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:409)<br>
+ -- com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:299)<br>
+ -- java.base/java.security.AccessController.doPrivileged(Native Method)<br>
+ -- com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleMouseEvent$2(GlassViewEventHandler.java:447)<br>
+ -- com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(QuantumToolkit.java:411)<br>
+ -- com.sun.javafx.tk.quantum.GlassViewEventHandler.handleMouseEvent(GlassViewEventHandler.java:446)<br>
+ -- com.sun.glass.ui.View.handleMouseEvent(View.java:556)<br>
+ -- com.sun.glass.ui.View.notifyMouse(View.java:942)<br>
+ -- com.sun.glass.ui.win.WinApplication._runLoop(Native Method)<br>
+ -- com.sun.glass.ui.win.WinApplication.lambda$runLoop$3(WinApplication.java:174)<br>
+ -- java.base/java.lang.Thread.run(Thread.java:834)<br>
+
+</p>
+<p class="SEVERE">
+    <strong>SEVERE</strong> 22/08/2019 20:50:41 <br>
+    <strong>Could not save history.</strong> <br>
+    org.sqlite.SQLiteException: [SQLITE_BUSY]  The database file is locked (database is locked)<br>
+ -- org.sqlite.core.DB.newSQLException(DB.java:909)<br>
+ -- org.sqlite.core.DB.newSQLException(DB.java:921)<br>
+ -- org.sqlite.core.DB.execute(DB.java:822)<br>
+ -- org.sqlite.core.DB.executeUpdate(DB.java:863)<br>
+ -- org.sqlite.jdbc3.JDBC3PreparedStatement.executeUpdate(JDBC3PreparedStatement.java:99)<br>
+ -- com.rohitawate.everest.sync.SQLiteManager.saveState(SQLiteManager.java:106)<br>
+ -- com.rohitawate.everest.sync.SyncManager$HistorySaver.run(SyncManager.java:102)<br>
+ -- com.google.common.util.concurrent.MoreExecutors$DirectExecutor.execute(MoreExecutors.java:398)<br>
+ -- com.rohitawate.everest.sync.SyncManager.saveState(SyncManager.java:50)<br>
+ -- com.rohitawate.everest.controllers.DashboardController.sendRequest(DashboardController.java:299)<br>
+ -- java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br>
+ -- java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br>
+ -- java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br>
+ -- java.base/java.lang.reflect.Method.invoke(Method.java:566)<br>
+ -- com.sun.javafx.reflect.Trampoline.invoke(MethodUtil.java:76)<br>
+ -- java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br>
+ -- java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br>
+ -- java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br>
+ -- java.base/java.lang.reflect.Method.invoke(Method.java:566)<br>
+ -- com.sun.javafx.reflect.MethodUtil.invoke(MethodUtil.java:273)<br>
+ -- com.sun.javafx.fxml.MethodHelper.invoke(MethodHelper.java:83)<br>
+ -- javafx.fxml.FXMLLoader$MethodHandler.invoke(FXMLLoader.java:1784)<br>
+ -- javafx.fxml.FXMLLoader$ControllerMethodEventHandler.handle(FXMLLoader.java:1670)<br>
+ -- com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:86)<br>
+ -- com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:238)<br>
+ -- com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:191)<br>
+ -- com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)<br>
+ -- com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)<br>
+ -- com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)<br>
+ -- com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)<br>
+ -- com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)<br>
+ -- com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)<br>
+ -- com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)<br>
+ -- com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)<br>
+ -- com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)<br>
+ -- com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)<br>
+ -- com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:49)<br>
+ -- javafx.event.Event.fireEvent(Event.java:198)<br>
+ -- javafx.scene.Node.fireEvent(Node.java:8890)<br>
+ -- javafx.scene.control.Button.fire(Button.java:203)<br>
+ -- com.sun.javafx.scene.control.behavior.ButtonBehavior.mouseReleased(ButtonBehavior.java:206)<br>
+ -- com.sun.javafx.scene.control.inputmap.InputMap.handle(InputMap.java:274)<br>
+ -- com.sun.javafx.event.CompositeEventHandler$NormalEventHandlerRecord.handleBubblingEvent(CompositeEventHandler.java:218)<br>
+ -- com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:80)<br>
+ -- com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:238)<br>
+ -- com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:191)<br>
+ -- com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)<br>
+ -- com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)<br>
+ -- com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)<br>
+ -- com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)<br>
+ -- com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)<br>
+ -- com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)<br>
+ -- com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)<br>
+ -- com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)<br>
+ -- com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)<br>
+ -- com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)<br>
+ -- com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:54)<br>
+ -- javafx.event.Event.fireEvent(Event.java:198)<br>
+ -- javafx.scene.Scene$MouseHandler.process(Scene.java:3862)<br>
+ -- javafx.scene.Scene.processMouseEvent(Scene.java:1849)<br>
+ -- javafx.scene.Scene$ScenePeerListener.mouseEvent(Scene.java:2590)<br>
+ -- com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:409)<br>
+ -- com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:299)<br>
+ -- java.base/java.security.AccessController.doPrivileged(Native Method)<br>
+ -- com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleMouseEvent$2(GlassViewEventHandler.java:447)<br>
+ -- com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(QuantumToolkit.java:411)<br>
+ -- com.sun.javafx.tk.quantum.GlassViewEventHandler.handleMouseEvent(GlassViewEventHandler.java:446)<br>
+ -- com.sun.glass.ui.View.handleMouseEvent(View.java:556)<br>
+ -- com.sun.glass.ui.View.notifyMouse(View.java:942)<br>
+ -- com.sun.glass.ui.win.WinApplication._runLoop(Native Method)<br>
+ -- com.sun.glass.ui.win.WinApplication.lambda$runLoop$3(WinApplication.java:174)<br>
+ -- java.base/java.lang.Thread.run(Thread.java:834)<br>
+
+</p>
+<p class="INFO">
+    <strong>INFO</strong> 22/08/2019 20:50:45 <br>
+    <strong>Application state saved.</strong> <br>
+    
+</p>
+<p class="INFO">
+    <strong>INFO</strong> 22/08/2019 20:58:37 <br>
+    <strong>Application state saved.</strong> <br>
+    
+</p>
+<p class="INFO">
+    <strong>INFO</strong> 22/08/2019 20:58:58 <br>
+    <strong>Settings file not found. Loading defaults.</strong> <br>
+    
+</p>
+<p class="INFO">
+    <strong>INFO</strong> 22/08/2019 20:58:59 <br>
+    <strong>Connected to database.</strong> <br>
+    
+</p>
+<p class="INFO">
+    <strong>INFO</strong> 22/08/2019 20:59:00 <br>
+    <strong>Application loaded.</strong> <br>
+    
+</p>
+<p class="INFO">
+    <strong>INFO</strong> 22/08/2019 21:01:35 <br>
+    <strong>Settings file not found. Loading defaults.</strong> <br>
+    
+</p>
+<p class="INFO">
+    <strong>INFO</strong> 22/08/2019 21:01:36 <br>
+    <strong>Connected to database.</strong> <br>
+    
+</p>
+<p class="INFO">
+    <strong>INFO</strong> 22/08/2019 21:01:37 <br>
+    <strong>Application loaded.</strong> <br>
+    
+</p>
+<p class="INFO">
+    <strong>INFO</strong> 22/08/2019 21:03:18 <br>
+    <strong>Settings file not found. Loading defaults.</strong> <br>
+    
+</p>
+<p class="INFO">
+    <strong>INFO</strong> 22/08/2019 21:03:19 <br>
+    <strong>Connected to database.</strong> <br>
+    
+</p>
+<p class="INFO">
+    <strong>INFO</strong> 22/08/2019 21:03:21 <br>
+    <strong>Application loaded.</strong> <br>
+    
+</p>
+<p class="INFO">
+    <strong>INFO</strong> 22/08/2019 21:03:24 <br>
+    <strong>Application state saved.</strong> <br>
+    
+</p>
+<p class="INFO">
+    <strong>INFO</strong> 22/08/2019 21:03:59 <br>
+    <strong>Settings file not found. Loading defaults.</strong> <br>
+    
+</p>
+<p class="INFO">
+    <strong>INFO</strong> 22/08/2019 21:04:00 <br>
+    <strong>Connected to database.</strong> <br>
+    
+</p>
+<p class="INFO">
+    <strong>INFO</strong> 22/08/2019 21:04:02 <br>
+    <strong>Application loaded.</strong> <br>
+    
+</p>
+<p class="INFO">
+    <strong>INFO</strong> 22/08/2019 21:04:27 <br>
+    <strong>Application state saved.</strong> <br>
+    
+</p>
+<p class="INFO">
+    <strong>INFO</strong> 22/08/2019 21:05:25 <br>
+    <strong>Settings file not found. Loading defaults.</strong> <br>
+    
+</p>
+<p class="INFO">
+    <strong>INFO</strong> 22/08/2019 21:05:26 <br>
+    <strong>Connected to database.</strong> <br>
+    
+</p>
+<p class="INFO">
+    <strong>INFO</strong> 22/08/2019 21:05:28 <br>
+    <strong>Application loaded.</strong> <br>
+    
+</p>
+<p class="INFO">
+    <strong>INFO</strong> 22/08/2019 21:12:04 <br>
+    <strong>Application state saved.</strong> <br>
+    
+</p>
+<p class="INFO">
+    <strong>INFO</strong> 22/08/2019 21:12:12 <br>
+    <strong>Settings file not found. Loading defaults.</strong> <br>
+    
+</p>
+<p class="INFO">
+    <strong>INFO</strong> 22/08/2019 21:12:13 <br>
+    <strong>Connected to database.</strong> <br>
+    
+</p>
+<p class="INFO">
+    <strong>INFO</strong> 22/08/2019 21:12:15 <br>
+    <strong>Application loaded.</strong> <br>
+    
+</p>
+<p class="INFO">
+    <strong>INFO</strong> 22/08/2019 21:13:18 <br>
+    <strong>Application state saved.</strong> <br>
+    
+</p>
+<p class="INFO">
+    <strong>INFO</strong> 22/08/2019 21:13:35 <br>
+    <strong>Settings file not found. Loading defaults.</strong> <br>
+    
+</p>
+<p class="INFO">
+    <strong>INFO</strong> 22/08/2019 21:13:36 <br>
+    <strong>Connected to database.</strong> <br>
+    
+</p>
+<p class="INFO">
+    <strong>INFO</strong> 22/08/2019 21:13:38 <br>
+    <strong>Application loaded.</strong> <br>
+    
+</p>
+<p class="INFO">
+    <strong>INFO</strong> 22/08/2019 21:14:32 <br>
+    <strong>Settings file not found. Loading defaults.</strong> <br>
+    
+</p>
+<p class="INFO">
+    <strong>INFO</strong> 22/08/2019 21:14:33 <br>
+    <strong>Connected to database.</strong> <br>
+    
+</p>
+<p class="INFO">
+    <strong>INFO</strong> 22/08/2019 21:14:35 <br>
+    <strong>Application loaded.</strong> <br>
+    
+</p>
+<p class="INFO">
+    <strong>INFO</strong> 22/08/2019 21:14:46 <br>
+    <strong>Application state saved.</strong> <br>
+    
+</p>
+<p class="INFO">
+    <strong>INFO</strong> 22/08/2019 21:28:18 <br>
+    <strong>Application state saved.</strong> <br>
+    
+</p>
+<p class="INFO">
+    <strong>INFO</strong> 22/08/2019 21:28:25 <br>
+    <strong>Settings file not found. Loading defaults.</strong> <br>
+    
+</p>
+<p class="INFO">
+    <strong>INFO</strong> 22/08/2019 21:28:26 <br>
+    <strong>Connected to database.</strong> <br>
+    
+</p>
+<p class="INFO">
+    <strong>INFO</strong> 22/08/2019 21:28:28 <br>
+    <strong>Application loaded.</strong> <br>
+    
+</p>
+<p class="INFO">
+    <strong>INFO</strong> 22/08/2019 21:30:26 <br>
+    <strong>Application state saved.</strong> <br>
+    
+</p>
+<p class="INFO">
+    <strong>INFO</strong> 22/08/2019 21:30:36 <br>
+    <strong>Settings file not found. Loading defaults.</strong> <br>
+    
+</p>
+<p class="INFO">
+    <strong>INFO</strong> 22/08/2019 21:30:37 <br>
+    <strong>Connected to database.</strong> <br>
+    
+</p>
+<p class="INFO">
+    <strong>INFO</strong> 22/08/2019 21:30:39 <br>
+    <strong>Application loaded.</strong> <br>
+    
+</p>
+<p class="INFO">
+    <strong>INFO</strong> 22/08/2019 21:33:17 <br>
+    <strong>Application state saved.</strong> <br>
+    
+</p>
+<p class="INFO">
+    <strong>INFO</strong> 22/08/2019 21:33:26 <br>
+    <strong>Settings file not found. Loading defaults.</strong> <br>
+    
+</p>
+<p class="INFO">
+    <strong>INFO</strong> 22/08/2019 21:33:27 <br>
+    <strong>Connected to database.</strong> <br>
+    
+</p>
+<p class="INFO">
+    <strong>INFO</strong> 22/08/2019 21:33:29 <br>
+    <strong>Application loaded.</strong> <br>
+    
+</p>
+<p class="INFO">
+    <strong>INFO</strong> 22/08/2019 21:34:07 <br>
+    <strong>Application state saved.</strong> <br>
+    
+</p>

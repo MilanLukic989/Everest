@@ -122,6 +122,10 @@ public class DashboardController implements Initializable {
     public enum ComposerTab {
         PARAMS, AUTH, HEADERS, BODY
     }
+    
+    private static final String style200 = "-fx-text-fill: green";
+    private static final String style404 = "-fx-text-fill: red";
+    private static final String styleDefault = "-fx-text-fill: white";
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -396,6 +400,16 @@ public class DashboardController implements Initializable {
         if (response == null)
             return;
 
+        if(response.getStatusCode() == 200) {
+        	statusCode.setStyle(style200);
+        	statusCodeDescription.setStyle(style200);
+        }else if(response.getStatusCode() == 404) {
+        	statusCode.setStyle(style404);
+        	statusCodeDescription.setStyle(style404);
+        }else {
+        	statusCode.setStyle(styleDefault);
+        	statusCodeDescription.setStyle(styleDefault);
+        }
         prettifyResponseBody(response);
         statusCode.setText(Integer.toString(response.getStatusCode()));
         statusCodeDescription.setText(EverestResponse.getReasonPhrase(response.getStatusCode()));
@@ -405,6 +419,17 @@ public class DashboardController implements Initializable {
     }
 
     private void showResponse(DashboardState state) {
+    	 if(state.statusCode == 200) {
+         	statusCode.setStyle(style200);
+         	statusCodeDescription.setStyle(style200);
+         }else if(state.statusCode == 404) {
+         	statusCode.setStyle(style404);
+         	statusCodeDescription.setStyle(style404);
+         }else {
+         	statusCode.setStyle(styleDefault);
+         	statusCodeDescription.setStyle(styleDefault);
+         }
+    	 
         prettifyResponseBody(state.responseBody, state.responseType);
         statusCode.setText(Integer.toString(state.statusCode));
         statusCodeDescription.setText(EverestResponse.getReasonPhrase(state.statusCode));
@@ -860,5 +885,12 @@ public class DashboardController implements Initializable {
     public String getHttpMethod() {
         return httpMethodBox.getValue();
     }
+    
+	@FXML
+    void copyBodyButton() {
+		responseArea.selectAll();
+		responseArea.copy();
+		responseArea.deselect();
+	}
 
 }

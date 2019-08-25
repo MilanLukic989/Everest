@@ -64,6 +64,7 @@
 }
 
 #sendButton,
+#clearButton,
 #sendButtonPane {
     -fx-background-color: #282828;
 }

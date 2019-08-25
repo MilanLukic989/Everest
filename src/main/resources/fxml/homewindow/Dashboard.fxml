@@ -168,7 +168,7 @@
                                                             </HBox.margin>
                                                         </Label>
                                                         <JFXButton fx:id="copyBodyButton" textFill="WHITE"
-                                                                   HBox.hgrow="ALWAYS">
+                                                                   HBox.hgrow="ALWAYS" onAction="#copyBodyButton">
                                                             <graphic>
                                                                 <ImageView fitHeight="20.0" fitWidth="20.0"
                                                                            pickOnBounds="true" preserveRatio="true">
